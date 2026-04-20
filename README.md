@@ -34,11 +34,28 @@ The **Car Evaluation AI System** predicts the overall condition of a used car ba
 - Python 3.6 or higher
 - scikit-learn
 
-## Installation (Linux)
+## Installation (Linux/Mac)
 
 ```bash
 # Install scikit-learn
-pip3 install scikit-learn
+pip install scikit-learn
 
 # Or with --user if permission issues
-pip3 install --user scikit-learn
+pip install --user scikit-learn
+```
+## Installation (Windows)
+
+```bash
+# Install scikit-learn
+py -m pip install scikit-learn
+
+# Or with --user if permission issues
+pip -m pip install --user scikit-learn
+```
+
+## Execution
+
+```bash
+# Use what ever environment variable is set (py, python, python3, etc...)
+py main.py
+```
