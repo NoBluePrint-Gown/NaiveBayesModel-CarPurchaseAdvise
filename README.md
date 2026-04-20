@@ -1,29 +1,44 @@
+# Car Evaluation AI System
 
-## Key Features of This System:
+A single-file machine learning system that predicts car conditions using a Naive Bayes classifier.
 
-1. **Complete Separation of Concerns**: 
-   - `model.py` handles all training and saving logic
-   - `main.py` handles all user interaction and predictions
+## What Is This System?
 
-2. **Robust Input Validation**: 
-   - Checks input length
-   - Validates each value against allowed categories
-   - Provides clear error messages
+The **Car Evaluation AI System** predicts the overall condition of a used car based on six key attributes:
 
-3. **User-Friendly Interface**:
-   - Colored terminal output
-   - Help commands
-   - Example inputs
-   - Confidence scores for predictions
+| Attribute | Description | Possible Values |
+|-----------|-------------|-----------------|
+| **buying** | Buying price | vhigh, high, med, low |
+| **maint** | Maintenance cost | vhigh, high, med, low |
+| **doors** | Number of doors | 2, 3, 4, 5more |
+| **persons** | Passenger capacity | 2, 4, more |
+| **lug_boot** | Luggage boot size | small, med, big |
+| **safety** | Safety rating | low, med, high |
 
-4. **Professional ML Practices**:
-   - Stratified train/test split
-   - Proper encoding of categorical variables
-   - Model persistence with `joblib`
-   - Detailed evaluation metrics
+**Output conditions:**
+- **Unacceptable** (unacc) - Don't buy
+- **Acceptable** (acc) - Reasonable choice
+- **Good** (good) - Solid option
+- **Very Good** (vgood) - Excellent choice
 
-To use this system:
-1. Save both scripts
-2. Download the `car.data` file from UCI repository
-3. Run `python model.py` to train
-4. Run `python main.py` to start the prediction system
+## Features
+
+- **Single file** - Everything in `main.py`
+- **Zero dependencies** - Only requires `scikit-learn`
+- **No file I/O** - Model stays in memory, no pickle/joblib files
+- **Trains on startup** - Always fresh model
+- **Shows confidence** - Displays prediction probabilities
+
+## Requirements
+
+- Python 3.6 or higher
+- scikit-learn
+
+## Installation (Linux)
+
+```bash
+# Install scikit-learn
+pip3 install scikit-learn
+
+# Or with --user if permission issues
+pip3 install --user scikit-learn
